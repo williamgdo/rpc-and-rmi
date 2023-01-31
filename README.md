@@ -14,7 +14,7 @@ de dentro da pasta /rmi
 
 2. Executar `java uploadRmi.Server`;
 
-3. Executar `java uploadRmi.Client <nome_do_arquivo>`, substituindo <nome_do_arquivo> pelo nome de um arquivo que esteja na pasta rmi. Para testes simples, um arquivo *text.txt* foi providenciado.
+3. Executar `java uploadRmi.Client <nome_do_arquivo> <host>`, substituindo <nome_do_arquivo> pelo nome de um arquivo que esteja na pasta rmi e <host> pelo endereco do host. Para testes simples, um arquivo *text.txt* foi providenciado.
 
 
 ## Script para gerar arquivos de tamanhos específicos:
