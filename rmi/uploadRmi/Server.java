@@ -10,21 +10,6 @@ public class Server implements uploadRmi.Upload {
   public Server() {
   }
 
-  // public byte[] download(String fileName) {
-  // try {
-  // File file = new File("/" + fileName);
-  // byte buffer[] = new byte[(int) file.length()];
-  // BufferedInputStream input = new BufferedInputStream(new
-  // FileInputStream(file.getAbsolutePath()));
-  // input.read(buffer, 0, buffer.length);
-  // input.close();
-  // return (buffer);
-  // } catch (Exception e) {
-  // e.printStackTrace();
-  // return (null);
-  // }
-  // }
-
   @Override
   public boolean upload(String fileName, byte[] bytes) {
     try {
@@ -48,6 +33,9 @@ public class Server implements uploadRmi.Upload {
 
       Upload stub = (Upload) UnicastRemoteObject.exportObject(obj, 0);
       // exporta
+
+      // System.setProperty("java.rmi.server.hostname", "192.168.x.x");
+      // Registry registry = LocateRegistry.createRegistry(1099);
 
       Registry registry = LocateRegistry.getRegistry();
       // Registra objeto remoto no registry

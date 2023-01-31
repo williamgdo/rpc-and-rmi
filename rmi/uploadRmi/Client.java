@@ -30,15 +30,16 @@ public class Client {
   public static void main(String[] args) {
     // String host = (args.length < 1) ? null : args[0];
 
-    if (args.length < 1) {
-      System.out.println("Digite o nome de um arquivo");
+    if (args.length < 2) {
+      System.out.println("Uso: java uploadRmi.Client <filename> <host>");
       return;
     }
 
     String fileName = args[0];
+    String host = args[1];
 
     try {
-      Registry registry = LocateRegistry.getRegistry();
+      Registry registry = LocateRegistry.getRegistry(host);
       // Obtém referência para o registry
 
       uploadRmi.Upload stub = (uploadRmi.Upload) registry.lookup("Upload");
