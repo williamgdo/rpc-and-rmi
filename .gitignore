@@ -1,3 +1,7 @@
 file-*
 uploaded_*
 uploaded-*
+rpc/bin
+rpc/artifacts
+rpc/src/file_*
+rpc/src/file.h
