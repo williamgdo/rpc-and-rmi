@@ -36,17 +36,17 @@ int main (int argc, char **argv){
 		exit(2);
 	}
 
-	printf("%s\n", input.file_name);
-	printf("chegou aqui\n");
 	filecreate_1(&input, cl);
 
 	filep = fopen(input.file_name, "rb");
 
-	if( filep == NULL )
+	if( filep == NULL ) {
 		printf("FP TA NULL\n");
-	printf("chegou aqui tambem\n");
+    // caso filep == NULL, exit(3)? 
+    // exit(3);
+  }
+
 	while (1) {
-		
 		fread(input.buffer, 4096, 1, filep);
 	
 		ret = filesend_1(&input, cl);

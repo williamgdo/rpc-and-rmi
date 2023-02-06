@@ -5,8 +5,7 @@
 #include "file.h"
 
 
-int *
-filecreate_1_svc(file_in * in, struct svc_req * rqstp)
+int* filecreate_1_svc(file_in * in, struct svc_req * rqstp)
 {
 	static int out = 0;
 
