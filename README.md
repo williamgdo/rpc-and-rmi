@@ -59,10 +59,10 @@ shred -n 1 -s 1M file-1mb
 
 ## Comparação entre as tecnologias
 
-Foi feito uma comparação com entre o upload de arquivos de 1gb, 100mb, 5mb e 1mb entre as duas tecnologias. A média dos resultados pode ser mostrada pelo gráfico a seguir:
+Foi feita uma comparação com entre o upload de arquivos de 1gb, 100mb, 5mb e 1mb entre as duas tecnologias. A média dos resultados pode ser mostrada pelo gráfico a seguir:
 
 <p align="center">
   <img src="assets/grafico.png" width="50%" >
 </p>
 
-No qual a linha em vermelho representa a média dos uploads feitos em RMI e a linha azul a média dos uploads feito em RPC. O RMI demonstra ser mais rápido e estável que o RPC para arquivos grandes.
+No qual a linha em vermelho representa a média dos uploads feitos em RMI e a linha azul a média dos uploads feito em RPC com nossa implementação em C. O RMI demonstra ser mais rápido que o RPC para arquivos grandes, mas isso se dá ao fato de que o tamanho do buffer do RPC está configurado para apenas 4096 bytes.
