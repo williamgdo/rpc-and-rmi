@@ -12,6 +12,7 @@ public class Server implements uploadRmi.Upload {
 
   @Override
   public boolean upload(String fileName, byte[] bytes) {
+    System.out.println("Salvando arquivo " + fileName);
     try {
       String newFileName = "uploaded_" + fileName;
       try (FileOutputStream stream = new FileOutputStream(newFileName)) {
